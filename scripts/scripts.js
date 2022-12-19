@@ -94,12 +94,15 @@ async function loadLazy(doc) {
   const { hash } = window.location;
   const element = hash ? main.querySelector(hash) : false;
   if (hash && element) element.scrollIntoView();
-
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  // loadHeader(doc.querySelector('header'));
+  // loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
+
+  const playlistURI = localStorage.getItem('finalPlaylistURI');
+  poll(main, addLoopingContent, playlistURI);
+
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
@@ -122,3 +125,58 @@ async function loadPage() {
 }
 
 loadPage();
+
+async function addLoopingContent(main, apiResponse) {
+  const ads = apiResponse.data;
+  let carousel = document.createElement('div');
+  carousel.className = 'carousel slide';
+  // carousel.setAttribute('data-ride', 'carousel');
+  carousel.setAttribute('data-interval', '5000');
+  carousel.setAttribute('data-keyboard', 'false');
+  carousel.setAttribute('data-pause', 'false');
+
+  let carouselInner = document.createElement('div');
+  carouselInner.className = 'carousel-inner';
+
+  for (let i = 0; i < ads.length; i++) {
+    let carouselItem = document.createElement('div');
+    carouselItem.className = (i===0) ? 'carousel-item active' :'carousel-item';
+
+    let carouselImage = document.createElement('img');
+    carouselImage.className = 'd-block w-100';
+    carouselImage.setAttribute('src', ads[i]['Published Link']);
+
+    carouselItem.appendChild(carouselImage);
+    carouselInner.appendChild(carouselItem);
+  }
+  carousel.appendChild(carouselInner);
+  main.replaceChild(carousel, document.querySelector('div'));
+  $('.carousel').carousel()
+}
+
+async function pollAPI(main, fn, url, interval, previousResponse) {
+  try {
+    let response = await fetch(url);
+    let apiResponse = await response.json();
+    if (response.status === 200 && !_.isEqual(apiResponse,previousResponse)) {
+      previousResponse=apiResponse;
+      console.log(" API response received: " + JSON.stringify(apiResponse));
+      fn(main, apiResponse);
+    }
+  } finally {
+    setTimeout(function() {
+      pollAPI(main, fn, url, interval, previousResponse);
+    }, interval);
+  }
+}
+
+const poll = ( main, fn, url ) => {
+  let interval = localStorage.getItem('franklinPollInterval');
+  if (!interval) {
+    interval = 1000;
+  }
+  console.log('Start poll...');
+  setTimeout(function() {
+    pollAPI(main, fn, url, interval, {});
+  }, 0);
+};
