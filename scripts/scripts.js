@@ -140,12 +140,21 @@ async function addLoopingContent(main, apiResponse) {
 
   for (let i = 0; i < ads.length; i++) {
     let carouselItem = document.createElement('div');
-    carouselItem.className = (i===0) ? 'carousel-item active' :'carousel-item';
+    carouselItem.className = (i === 0) ? 'carousel-item active' : 'carousel-item';
 
-    let carouselImage = createOptimizedPicture(ads[i]['Published Link'], '', true);
-    carouselImage.className = 'd-block';
-
-    carouselItem.appendChild(carouselImage);
+    let isVideo = ads[i]['Published Link'].endsWith('.mp4');
+    if (isVideo) {
+      let carouselVideo = document.createElement('video');
+      carouselVideo.setAttribute('src', ads[i]['Published Link']);
+      carouselVideo.className = 'd-block w-100';
+      carouselVideo.setAttribute('autoplay', 'autoplay');
+      carouselVideo.setAttribute('loop', 'loop');
+      carouselItem.appendChild(carouselVideo);
+    } else {
+      let carouselImage = createOptimizedPicture(ads[i]['Published Link'], '', true);
+      carouselImage.className = 'd-block';
+      carouselItem.appendChild(carouselImage);
+    }
     carouselInner.appendChild(carouselItem);
   }
   carousel.appendChild(carouselInner);
