@@ -10,7 +10,7 @@ import {
   decorateTemplateAndTheme,
   waitForLCP,
   loadBlocks,
-  loadCSS,
+  loadCSS, createOptimizedPicture,
 } from './lib-franklin.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
@@ -142,9 +142,8 @@ async function addLoopingContent(main, apiResponse) {
     let carouselItem = document.createElement('div');
     carouselItem.className = (i===0) ? 'carousel-item active' :'carousel-item';
 
-    let carouselImage = document.createElement('img');
-    carouselImage.className = 'd-block w-100';
-    carouselImage.setAttribute('src', ads[i]['Published Link']);
+    let carouselImage = createOptimizedPicture(ads[i]['Published Link'], '', true);
+    carouselImage.className = 'd-block';
 
     carouselItem.appendChild(carouselImage);
     carouselInner.appendChild(carouselItem);
@@ -174,6 +173,9 @@ const poll = ( main, fn, url ) => {
   let interval = localStorage.getItem('franklinPollInterval');
   if (!interval) {
     interval = 1000;
+  }
+  if(!url){
+    url = 'https://main--screens-ad-management--mchandak29.hlx.page/final-playlist.json';
   }
   console.log('Start poll...');
   setTimeout(function() {
