@@ -1,8 +1,6 @@
 import {
   sampleRUM,
   buildBlock,
-  loadHeader,
-  loadFooter,
   decorateButtons,
   decorateIcons,
   decorateSections,
@@ -130,8 +128,9 @@ async function addLoopingContent(main, apiResponse) {
   const ads = apiResponse.data;
   let carousel = document.createElement('div');
   carousel.className = 'carousel slide';
+  carousel.id='colesdemo';
   // carousel.setAttribute('data-ride', 'carousel');
-  carousel.setAttribute('data-interval', '5000');
+  //carousel.setAttribute('data-interval', '5000');
   carousel.setAttribute('data-keyboard', 'false');
   carousel.setAttribute('data-pause', 'false');
 
@@ -141,14 +140,19 @@ async function addLoopingContent(main, apiResponse) {
   for (let i = 0; i < ads.length; i++) {
     let carouselItem = document.createElement('div');
     carouselItem.className = (i === 0) ? 'carousel-item active' : 'carousel-item';
+    carouselItem.setAttribute('data-interval', (ads[i]['Duration'] * 1000).toString());
 
     let isVideo = ads[i]['Published Link'].endsWith('.mp4');
     if (isVideo) {
       let carouselVideo = document.createElement('video');
-      carouselVideo.setAttribute('src', ads[i]['Published Link']);
+      let carouselVideoSource = document.createElement('source');
+      carouselVideoSource.setAttribute('src', ads[i]['Published Link']);
+      carouselVideoSource.setAttribute('type', 'video/mp4');
       carouselVideo.className = 'd-block w-100';
-      carouselVideo.setAttribute('autoplay', 'autoplay');
-      carouselVideo.setAttribute('loop', 'loop');
+      //carouselVideo.setAttribute('autoplay', 'autoplay');
+      //carouselVideo.setAttribute('loop', 'loop');
+      //carouselVideo.setAttribute('muted','true');
+      carouselVideo.appendChild(carouselVideoSource);
       carouselItem.appendChild(carouselVideo);
     } else {
       let carouselImage = createOptimizedPicture(ads[i]['Published Link'], '', true);
@@ -159,7 +163,35 @@ async function addLoopingContent(main, apiResponse) {
   }
   carousel.appendChild(carouselInner);
   main.replaceChild(carousel, document.querySelector('div'));
-  $('.carousel').carousel()
+  $('.carousel').carousel();
+  carouselInterval();
+  videoPlay();
+
+}
+
+function videoPlay() {
+
+  $('#colesdemo').on('slid.bs.carousel', function () {
+    if($('#colesdemo').find('.active').children()[0].nodeName=='VIDEO'){
+      let vid = $('#colesdemo').find('.active').children()[0];
+      vid.muted = true;
+      vid.play();
+    }
+  })
+}
+
+function carouselInterval() {
+  let t;
+  let start = $('#colesdemo').find('.active').attr('data-interval');
+  t = setTimeout("$('#colesdemo').carousel({interval: 1000});", start-1000);
+
+  $('#colesdemo').on('slid.bs.carousel', function () {
+    clearTimeout(t);
+    var duration = $(this).find('.active').attr('data-interval');
+
+    $('#colesdemo').carousel('pause');
+    t = setTimeout("$('#colesdemo').carousel();", duration-1000);
+  })
 }
 
 async function pollAPI(main, fn, url, interval, previousResponse) {
@@ -184,7 +216,7 @@ const poll = ( main, fn, url ) => {
     interval = 1000;
   }
   if(!url){
-    url = 'https://main--screens-ad-management--mchandak29.hlx.page/final-playlist.json';
+    url = 'https://288650-franklinecolesdemo-stage.adobeio-static.net/api/v1/web/franklin_coles_demo/playlist?numofslot=18&storeid=Coles_Aus_123';
   }
   console.log('Start poll...');
   setTimeout(function() {
