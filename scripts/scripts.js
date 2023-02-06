@@ -171,7 +171,7 @@ async function pollAPI(main, fn, url, interval, previousResponse) {
 const poll = (main, fn, url) => {
   let interval = localStorage.getItem('franklinPollInterval');
   if (!interval) {
-    interval = 1000;
+    interval = 10000;
   }
   if (!url) {
     // eslint-disable-next-line no-param-reassign
