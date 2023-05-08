@@ -9,11 +9,11 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1683545726462,
+  "timestamp": 1683545728489,
   "entries": [
     {
-      "path": "/content/screens/south-australia/greenacres/coles-saus-greenarces",
-      "timestamp": 1683544834000
+      "path": "/content/screens/queensland/forest-lake/coles-qsl-forest-lake",
+      "timestamp": 1683544914000
     },
     {
       "path": "/scripts/lib-franklin.js",

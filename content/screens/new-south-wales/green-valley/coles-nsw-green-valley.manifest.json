@@ -9,11 +9,11 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1683545726462,
+  "timestamp": 1683545731145,
   "entries": [
     {
-      "path": "/content/screens/south-australia/greenacres/coles-saus-greenarces",
-      "timestamp": 1683544834000
+      "path": "/content/screens/new-south-wales/green-valley/coles-nsw-green-valley",
+      "timestamp": 1683531235000
     },
     {
       "path": "/scripts/lib-franklin.js",

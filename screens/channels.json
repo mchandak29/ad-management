@@ -29,6 +29,54 @@
       "externalId": "/content/screens/south-australia/craigmore/coles-saus-craigmore",
       "title": "Coles Craigmore",
       "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/south-australia/craigmore/coles-saus-craigmore"
+    },
+    {
+      "lastModified": "2023-05-08T11:21:54.000Z",
+      "externalId": "/content/screens/queensland/forest-lake/coles-qsl-forest-lake",
+      "title": "Coles Forest Lake",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/queensland/forest-lake/coles-qsl-forest-lake"
+    },
+    {
+      "lastModified": "2023-05-08T11:22:13.000Z",
+      "externalId": "/content/screens/queensland/cleveland/coles-qsl-cleveland",
+      "title": "Coles Cleveland",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/queensland/cleveland/coles-qsl-cleveland"
+    },
+    {
+      "lastModified": "2023-05-08T11:22:32.000Z",
+      "externalId": "/content/screens/queensland/cannon-hill/coles-qsl-cannon-hill",
+      "title": "Coles Cannon Hill",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/queensland/cannon-hill/coles-qsl-cannon-hill"
+    },
+    {
+      "lastModified": "2023-05-08T11:22:52.000Z",
+      "externalId": "/content/screens/queensland/brookside/coles-qsl-brookside",
+      "title": "Coles Brookside",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/queensland/brookside/coles-qsl-brookside"
+    },
+    {
+      "lastModified": "2023-05-08T07:33:55.000Z",
+      "externalId": "/content/screens/new-south-wales/green-valley/coles-nsw-green-valley",
+      "title": "Coles Green Valley",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/new-south-wales/green-valley/coles-nsw-green-valley"
+    },
+    {
+      "lastModified": "2023-05-08T07:33:36.000Z",
+      "externalId": "/content/screens/new-south-wales/broadway/coles-nsw-broadway",
+      "title": "Coles Broadway",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/new-south-wales/broadway/coles-nsw-broadway"
+    },
+    {
+      "lastModified": "2023-05-08T07:33:20.000Z",
+      "externalId": "/content/screens/new-south-wales/bondi-junction/coles-nsw-bondi-junction",
+      "title": "Coles Bondi Junction",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/new-south-wales/bondi-junction/coles-nsw-bondi-junction"
+    },
+    {
+      "lastModified": "2023-05-08T07:32:46.000Z",
+      "externalId": "/content/screens/new-south-wales/belmont/coles-nsw-belmont",
+      "title": "Coles Belmont",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/new-south-wales/belmont/coles-nsw-belmont"
     }
   ],
   "metadata": {
