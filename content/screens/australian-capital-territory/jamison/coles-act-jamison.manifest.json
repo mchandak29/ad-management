@@ -9,11 +9,11 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1683530886899,
+  "timestamp": 1683530887663,
   "entries": [
     {
-      "path": "/content/screens/australian-capital-territory/amaroo/coles-act-amaroo",
-      "timestamp": 1683517946000
+      "path": "/content/screens/australian-capital-territory/jamison/coles-act-jamison",
+      "timestamp": 1683517976000
     },
     {
       "path": "/scripts/lib-franklin.js",
