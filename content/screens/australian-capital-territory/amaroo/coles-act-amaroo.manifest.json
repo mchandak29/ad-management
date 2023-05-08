@@ -1,0 +1,71 @@
+{
+  "version": "3.0",
+  "contentDelivery": {
+    "providers": [
+      {
+        "name": "franklin",
+        "endpoint": "/"
+      }
+    ],
+    "defaultProvider": "franklin"
+  },
+  "timestamp": 1683530373393,
+  "entries": [
+    {
+      "path": "/content/screens/australian-capital-territory/amaroo/coles-act-amaroo",
+      "timestamp": 1683517946000
+    },
+    {
+      "path": "/scripts/lib-franklin.js",
+      "timestamp": 1671432987000
+    },
+    {
+      "path": "/scripts/scripts.js",
+      "timestamp": 1675680104000
+    },
+    {
+      "path": "/styles/styles.css",
+      "timestamp": 1673523373000
+    },
+    {
+      "path": "/media_197e26c40d4dde0b718234915348a0348f4d7bfd5.png?width=750&format=png&optimize=medium",
+      "hash": "197e26c40d4dde0b718234915348a0348f4d7bfd5"
+    },
+    {
+      "path": "/media_1d175998fa74f097aa62cc3fdff2c840d74f56d98.png?width=750&format=png&optimize=medium",
+      "hash": "1d175998fa74f097aa62cc3fdff2c840d74f56d98"
+    },
+    {
+      "path": "/media_13fbacf6f3493cc062f9515a0cd5db55eeb879a83.png?width=750&format=png&optimize=medium",
+      "hash": "13fbacf6f3493cc062f9515a0cd5db55eeb879a83"
+    },
+    {
+      "path": "/media_1cfe8dc338ec8fcb0eb7967829121cbf1840907a0.png?width=750&format=png&optimize=medium",
+      "hash": "1cfe8dc338ec8fcb0eb7967829121cbf1840907a0"
+    },
+    {
+      "path": "/media_1cb724e375d0f01109909fe65ac978765f45087c0.png?width=750&format=png&optimize=medium",
+      "hash": "1cb724e375d0f01109909fe65ac978765f45087c0"
+    },
+    {
+      "path": "/media_143985814c5cb4262e926d6120cf247af9f3e505a.png?width=750&format=png&optimize=medium",
+      "hash": "143985814c5cb4262e926d6120cf247af9f3e505a"
+    },
+    {
+      "path": "/media_1ac691ff506b1ffabe6c609f3c555a1eb32d4ff02.png?width=750&format=png&optimize=medium",
+      "hash": "1ac691ff506b1ffabe6c609f3c555a1eb32d4ff02"
+    },
+    {
+      "path": "/scripts/delayed.js",
+      "timestamp": 1671432987000
+    },
+    {
+      "path": "/blocks/columns/columns.css",
+      "timestamp": 1671432986000
+    },
+    {
+      "path": "/blocks/columns/columns.js",
+      "timestamp": 1671432986000
+    }
+  ]
+}
