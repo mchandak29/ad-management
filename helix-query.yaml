@@ -20,6 +20,10 @@ indices:
         select: none
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+      manifestPath:
+        select: head > meta[name="manifestpath"]
+        value:  |
+          attribute(el, 'content')
       liveUrl:
         select: head > link[rel="canonical"]
         value:  |
