@@ -1,0 +1,30 @@
+version: 1
+indices:
+  channels:
+    include:
+      - '/content/screens/**'
+    target: '/internal/screens/channels'
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+      externalId:
+        select: main
+        value: path
+      lastModified:
+        select: none
+        value: |
+          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+      lastUpdated:
+        select: none
+        value: |
+          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+      liveUrl:
+        select: head > link[rel="canonical"]
+        value:  |
+          attribute(el, 'href')
+      publishUrl:
+        select: head > link[rel="canonical"]
+        value: |
+          attribute(el, 'href')
