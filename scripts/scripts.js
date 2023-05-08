@@ -175,7 +175,8 @@ const poll = (main, fn, url) => {
   }
   if (!url) {
     // eslint-disable-next-line no-param-reassign
-    url = 'https://288650-franklinecolesdemo-stage.adobeio-static.net/api/v1/web/franklin_coles_demo/playlist';
+    // url = 'https://288650-franklinecolesdemo-stage.adobeio-static.net/api/v1/web/franklin_coles_demo/playlist';
+    url = 'https://288650-257ambermackerel.adobeio-static.net/api/v1/web/colesdemoapi/urlprovider';
   }
   console.log('Start poll...');
   setTimeout(() => {
