@@ -11,6 +11,24 @@
       "externalId": "/content/screens/australian-capital-territory/jamison/coles-act-jamison",
       "title": "Coles Jamison",
       "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/australian-capital-territory/jamison/coles-act-jamison"
+    },
+    {
+      "lastModified": "2023-05-08T11:20:34.000Z",
+      "externalId": "/content/screens/south-australia/greenacres/coles-saus-greenarces",
+      "title": "Coles Greenarces",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/south-australia/greenacres/coles-saus-greenarces"
+    },
+    {
+      "lastModified": "2023-05-08T11:21:07.000Z",
+      "externalId": "/content/screens/south-australia/dernancourt/coles-saus-derancourt",
+      "title": "Coles Derancourt",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/south-australia/dernancourt/coles-saus-derancourt"
+    },
+    {
+      "lastModified": "2023-05-08T11:21:26.000Z",
+      "externalId": "/content/screens/south-australia/craigmore/coles-saus-craigmore",
+      "title": "Coles Craigmore",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/south-australia/craigmore/coles-saus-craigmore"
     }
   ],
   "metadata": {

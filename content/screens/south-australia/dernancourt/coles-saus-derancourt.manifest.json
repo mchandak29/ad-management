@@ -9,11 +9,11 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1683545295836,
+  "timestamp": 1683545296504,
   "entries": [
     {
-      "path": "/content/screens/australian-capital-territory/jamison/coles-act-jamison",
-      "timestamp": 1683517976000
+      "path": "/content/screens/south-australia/dernancourt/coles-saus-derancourt",
+      "timestamp": 1683544867000
     },
     {
       "path": "/scripts/lib-franklin.js",
