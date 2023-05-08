@@ -77,6 +77,12 @@
       "externalId": "/content/screens/new-south-wales/belmont/coles-nsw-belmont",
       "title": "Coles Belmont",
       "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/new-south-wales/belmont/coles-nsw-belmont"
+    },
+    {
+      "lastModified": "2023-05-08T07:32:23.000Z",
+      "externalId": "/content/screens/australian-capital-territory/manuka/coles-act-manuka",
+      "title": "Coles Manuka",
+      "liveUrl": "https://main--screens-ad-management--mchandak29.hlx.live/content/screens/australian-capital-territory/manuka/coles-act-manuka"
     }
   ],
   "metadata": {

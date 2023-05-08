@@ -9,11 +9,11 @@
     ],
     "defaultProvider": "franklin"
   },
-  "timestamp": 1683546667812,
+  "timestamp": 1683546670318,
   "entries": [
     {
-      "path": "/content/screens/south-australia/craigmore/coles-saus-craigmore",
-      "timestamp": 1683544886000
+      "path": "/content/screens/australian-capital-territory/manuka/coles-act-manuka",
+      "timestamp": 1683531143000
     },
     {
       "path": "/scripts/lib-franklin.js",
